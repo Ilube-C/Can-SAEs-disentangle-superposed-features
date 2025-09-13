@@ -1,0 +1,28 @@
+============================================================================================================================================
+COMPREHENSIVE METRICS TABLE
+============================================================================================================================================
+Generated: 20250830_235501
+Experiment: Procrustes Abnormality Demo
+Architectures: ['10-5-10']
+Sparsities: [0.83, 0.84]
+============================================================================================================================================
+
+Architecture Sparsity AE Loss    SAE Loss   SAE Recon  Linear CKA RBF CKA    Procrustes RSA        DiagStr    OffDiag    SAE_L0    
+------------ -------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+10-5-10      0.83     0.05263    0.00211    0.00053    0.993      0.996      0.923      0.994      0.80       0.116      0.485     
+10-5-10      0.84     0.03928    0.03257    0.03045    0.833      0.674      0.290      0.755      0.75       0.093      0.190     
+
+
+============================================================================================================================================
+METRIC EXPLANATIONS
+============================================================================================================================================
+AE Loss:       Autoencoder reconstruction loss
+SAE Loss:      SAE total loss (reconstruction + sparsity penalty)
+SAE Recon:     SAE pure reconstruction error (no sparsity penalty)
+Linear CKA:    Linear Centered Kernel Alignment (bottleneck vs SAE recon)
+RBF CKA:       RBF Centered Kernel Alignment (bottleneck vs SAE recon)
+Procrustes:    Procrustes similarity analysis (bottleneck vs SAE recon)
+RSA:           Representational Similarity Analysis (distance correlation)
+DiagStr:       Diagonal strength of W^T @ W (normalized by dimension)
+OffDiag:       Off-diagonal interference in W^T @ W (mean absolute)
+SAE_L0:        SAE empirical sparsity (fraction of active neurons)

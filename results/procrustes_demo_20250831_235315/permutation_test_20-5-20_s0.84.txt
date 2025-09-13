@@ -1,0 +1,20 @@
+Permutation Test Results - 20-5-20 at sparsity 0.84
+======================================================================
+
+Test case: 20-5-20_s0.84
+Number of permutations: 500
+AE activations shape: (100, 5)
+SAE reconstructions shape: (100, 5)
+
+Metric       Observed   P-value    Z-score    Significance   
+-----------------------------------------------------------------
+linear_cka   0.602      0.000      38.31      ***            
+rbf_cka      0.612      0.000      37.38      ***            
+procrustes   0.131      0.000      18.13      ***            
+rsa          0.725      0.000      10.35      ***            
+
+Interpretation:
+*** p < 0.001 (highly significant)
+**  p < 0.01  (very significant)
+*   p < 0.05  (significant)
+n.s. p >= 0.05 (not significant)
