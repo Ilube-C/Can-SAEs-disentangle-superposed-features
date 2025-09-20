@@ -1,5 +1,9 @@
 Can-SAEs-disentangle-superposed-features - Dissertation Project
 
+  Key Finding
+
+When superposition occurs we observe a decline in representational alignment between the geometric structures of the original features and those recovered by the SAE. This implies the features recovered by SAEs could be in an entirely different encoding each time its run i.e. a different set of concepts allocated between the neurons.  
+
   Repository Structure
 
   This repository contains research code for a dissertation studying superposition in neural networks,
@@ -7,28 +11,13 @@ Can-SAEs-disentangle-superposed-features - Dissertation Project
 
   Note: This repository has two branches:
   - main - Contains the dissertation document and writing
-  - master - Contains the research code implementation (current branch)
+  - master - Contains the research code implementation 
 
   Project Overview
 
   Superposition is a behaviour exhibited by neural networks, where one dimension is uesed to encode multiple features when data is projected to a lower dimensionality. In [Towards Monosemanticity](https://transformer-circuits.pub/2023/monosemantic-features/index.html), Anthropic use a Sparse Autoencoder (SAE) to separate the superposed features of a language model into individual interpretable features. This project implements the toy models experiment from Anthropic's [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) and extends it by using SAEs of inverted dimensionality to try to recover the original features from the input data, in order to test how effectively SAEs are able to disentangle superposed features. The codebase was converted from Jupyter notebooks to a structured Python project with pure NumPy implementations for complete mathematical transparency.
 
-  Key Research Findings
 
-  Superposition Phase Transitions
-
-  The experiments revealed critical phase transitions in how autoencoders handle feature
-  superposition:
-
-  - Sparsity 0.1-0.7: Normal reconstruction with moderate superposition
-  - Sparsity 0.82-0.87: Critical transition region - reconstruction loss peaks as model struggles with    
-   superposition/orthogonality tradeoff
-  - Sparsity 0.9+: Efficient sparse regime - model successfully adapts to represent sparse features       
-
-  This phase transition around sparsity 0.85 represents a fundamental shift in how the model balances     
-  feature interference versus efficient representation.
-
-  
 
   Implementation Details
 
@@ -54,6 +43,7 @@ Can-SAEs-disentangle-superposed-features - Dissertation Project
   source venv/Scripts/activate  # Windows
   # source venv/bin/activate    # Linux/Mac
   pip install -r requirements.txt
+
 
   Running Experiments
 
